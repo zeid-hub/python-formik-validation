@@ -11,7 +11,7 @@ from models import db, Customer
 
 fake = Faker()
 
-usernames = [fake.first_name() for i in range(4)]
+usernames = [fake.first_name() for i in range(5)]
 if "Duane" not in usernames:
     usernames.append("Duane")
 
@@ -21,7 +21,7 @@ def make_customers():
     
     customers = []
 
-    for i in range(3):
+    for i in range(5):
         customer = Customer(
             email=fake.email(),
             age= randint(0, 125),
